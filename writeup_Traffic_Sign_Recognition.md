@@ -91,6 +91,7 @@ It can clearly be seen that the samples are not uniformly distributed, for there
 I used random rotation and random noise on the training data set, at first to fill up the classes with less than 990 image samples and than on all classes to increase the overall amount of training data from 34799 to 231831. As result I got a more accurate model, especially for distinguishing between very similar traffic signs like "Slippery road", "Road work", "Children crossing" and "Bicycles crossing". Finally the model was able to classify a new "Slippery road" image which I downloaded from the internet.
 
 Here is an example of a rotated image and a noisy image:
+
 ![alt text][image2]
 
 #### 2. Preprocessing the image data.
@@ -103,6 +104,7 @@ mean of the training set of 0.0 and its standard deviation of 1.0 with the minim
 I also tried to clip the pixel values to a range between minus one and one and than shift them to the positive range from zero to one, but that resulted in a significantly less accurate model.
 
 Here is an example of an RGB-image and the corresponding preprocessed grayscale image:
+
 ![alt text][image3]
 
 
@@ -198,11 +200,19 @@ The model was able to correctly guess all five traffic signs, which gives an acc
 At first I calculated the logits for every new image, by feeding the images with their corresponding labels into the model. Then I used the tf.nn.top_k() with k=5 on the tf.nn.softmax() of the logits in order to get the top five probabilities for every image (I did this in a tf.Session() because I used the Tensorflow 1 API, which does not support eager execution).
 
 For the first image, the model is nearly a hundred percent sure that this is a "Speed limit (30km/h)" sign (probability of 1.0), the top five soft max probabilities are:
+
 ![alt text][image5]
+
 For the second image the probability for the "no passing" sign is 0.98, followed by 2% probability for "End of no passing":
+
 ![alt text][image6]
+
 For the third and the forth image I got a 100% probability for the correct detection of "Yield" and "Wild animals crossing":
+
 ![alt text][image7]
+
 ![alt text][image8]
+
 The fifth image is the most challenging. The model predicted with the highest probability the correct sign (0.55 for "Slippery road"), with a probability of 0.11 "Beware of ice/snow" with 0.10 "Right-of-way at the next intersection" with 0.04 "End of no passing by vehicles over 3.5 metric tons" and with the lowest of the top five softmax probabilities of 0.04 for the "Priority road" sign.
+
 ![alt text][image9]
