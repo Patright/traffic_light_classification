@@ -33,7 +33,7 @@ The goals / steps of this project are the following:
 ### Writeup / README
 
 This is my writeup file for the project.
-Here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
+Here is a link to my [project code](https://github.com/Patright/traffic_light_classification/blob/master/Traffic_Sign_Classifier.ipynb).
 
 ### Data Set Summary & Exploration
 
