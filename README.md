@@ -118,10 +118,10 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:----------------------|:----------------------------------------------| 
 | Input         		| 32x32x1 normalized grayscale image			| 
-| Convolution 5x5     	| 1x1 stride, valid padding, output: 28x28x6 	|
+| Convolution 3x3     	| 1x1 stride, valid padding, output: 28x28x6 	|
 | RELU					| activation function							|
 | Max pooling	      	| 2x2 stride, valid padding, output: 14x14x6	|
-| Convolution 5x5     	| 1x1 stride, valid padding, output: 10x10x16 	|
+| Convolution 3x3     	| 1x1 stride, valid padding, output: 10x10x16 	|
 | RELU					| activation function							|
 | Max pooling	      	| 2x2 stride, valid padding, output: 5x5x16 	|
 | Flatten to 1D 		| output: 400									|
